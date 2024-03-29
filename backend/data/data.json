@@ -1,4 +1,5 @@
-
+{
+"rooms":[
 {
 "roomName": "Room230",
 "noOfPersons": 4,
@@ -7,7 +8,7 @@
 "noOfReviews": 10,
 "roomImage": "/Users/pckiousis/Desktop/aueb/6th semester/ds/ds_project/Data"
 }
-
+,
 {
     "roomName": "Room40",
     "noOfPersons": 5,
@@ -15,8 +16,9 @@
     "stars": 5,
     "noOfReviews": 15,
     "roomImage": "/Users/pckiousis/Desktop/aueb/6th semester/ds/ds_project/Data"
+
 }
-
-
+]
+}
 
 
