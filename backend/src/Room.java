@@ -10,6 +10,25 @@ public class Room implements Serializable {
     private int noOfReviews;
     private String roomImage;
 
+    private String id;
+    private List<Reservation> reservations;
+
+    public Room(String id, String roomName) {
+        this.id = id;
+        this.roomName = roomName;
+        this.reservations = new ArrayList<>();
+    }
+
+    public synchronized void addReservation(Reservation reservation) {
+        reservations.add(reservation);
+    }
+
+    public synchronized List<Reservation> getReservations() {
+        return new ArrayList<>(reservations); // Return a copy to avoid concurrent modification
+    }
+
+        // Getters and setters
+    }
 
     public Room(String roomName, int noOfPersons, String area, int stars, int noOfReviews, String roomImage)
     {
@@ -67,8 +86,6 @@ public class Room implements Serializable {
     }
 
 
-
-
     @Override
     public String toString()
     {
@@ -79,4 +96,18 @@ public class Room implements Serializable {
                 " noOfReviews: " + this.noOfReviews +
                 " roomImage: " + this.roomImage;
     }
+}
+
+public class Reservation {
+    private String id;
+    private LocalDate startDate;
+    private LocalDate endDate;
+
+    public Reservation(String id, LocalDate startDate, LocalDate endDate) {
+        this.id = id;
+        this.startDate = startDate;
+        this.endDate = endDate;
+    }
+
+    // Getters and setters
 }
