@@ -2,7 +2,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.util.Scanner;
-
+import json;
 public class DummyApplication {
     public static void main(String[] args) {
         try {
@@ -12,7 +12,7 @@ public class DummyApplication {
 
             Scanner scanner = new Scanner(System.in);
             System.out.println("Enter search criteria: ");
-            String criteria = scanner.nextLine();
+            String criteria = ParserJSON(/Users/pckiousis/Desktop/aueb/6th semester/ds/ds_project/GetaRoom-App-main 2/backend/data)
             output.writeObject(criteria); // Send criteria to Master Server
 
             // Receive and process response from Master Server

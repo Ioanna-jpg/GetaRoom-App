@@ -90,11 +90,11 @@ public class Room implements Serializable {
     public String toString()
     {
         return "roomName: " + this.roomName +
-                " noOfPersons: " + this.noOfPersons +
-                " area: " + this.area +
-                " stars: " + this.stars +
-                " noOfReviews: " + this.noOfReviews +
-                " roomImage: " + this.roomImage;
+               " noOfPersons: " + this.noOfPersons +
+               " area: " + this.area +
+               " stars: " + this.stars +
+               " noOfReviews: " + this.noOfReviews +
+               " roomImage: " + this.roomImage;
     }
 }
 
