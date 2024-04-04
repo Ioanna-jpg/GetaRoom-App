@@ -1,5 +1,9 @@
 import java.time.LocalDateTime;
 import java.io.*;
+import java.util.*;
+import java.time.LocalDate;
+
+import re.Reservation;
 
 public class Room implements Serializable {
 
@@ -28,7 +32,7 @@ public class Room implements Serializable {
     }
 
         // Getters and setters
-    }
+    
 
     public Room(String roomName, int noOfPersons, String area, int stars, int noOfReviews, String roomImage)
     {
@@ -98,16 +102,3 @@ public class Room implements Serializable {
     }
 }
 
-public class Reservation {
-    private String id;
-    private LocalDate startDate;
-    private LocalDate endDate;
-
-    public Reservation(String id, LocalDate startDate, LocalDate endDate) {
-        this.id = id;
-        this.startDate = startDate;
-        this.endDate = endDate;
-    }
-
-    // Getters and setters
-}
