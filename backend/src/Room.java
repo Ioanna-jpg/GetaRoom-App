@@ -1,9 +1,6 @@
-import java.time.LocalDateTime;
-import java.io.*;
-import java.util.*;
-import java.time.LocalDate;
+package org.example;
+import java.io.Serializable;
 
-import re.Reservation;
 
 public class Room implements Serializable {
 
@@ -15,25 +12,18 @@ public class Room implements Serializable {
     private String roomImage;
 
     private String id;
-    private List<Reservation> reservations;
 
     public Room(String id, String roomName) {
         this.id = id;
         this.roomName = roomName;
-        this.reservations = new ArrayList<>();
     }
 
-    public synchronized void addReservation(Reservation reservation) {
-        reservations.add(reservation);
+    // Getters and setters
+
+
+    public Room(){
+
     }
-
-    public synchronized List<Reservation> getReservations() {
-        return new ArrayList<>(reservations); // Return a copy to avoid concurrent modification
-    }
-
-        // Getters and setters
-    
-
     public Room(String roomName, int noOfPersons, String area, int stars, int noOfReviews, String roomImage)
     {
 
@@ -94,11 +84,11 @@ public class Room implements Serializable {
     public String toString()
     {
         return "roomName: " + this.roomName +
-               " noOfPersons: " + this.noOfPersons +
-               " area: " + this.area +
-               " stars: " + this.stars +
-               " noOfReviews: " + this.noOfReviews +
-               " roomImage: " + this.roomImage;
+                " noOfPersons: " + this.noOfPersons +
+                " area: " + this.area +
+                " stars: " + this.stars +
+                " noOfReviews: " + this.noOfReviews +
+                " roomImage: " + this.roomImage;
     }
 }
 
